@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Show Tracker</title>
+        <link rel="stylesheet" href="{{ url_for('static',filename='index.css') }}">
+    </head>
+    <body>
+        <div class="container">
+            <h3 class="title">Show Tracker</h3>
+            <div class="week">
+                <div class="day-title">
+                    Mon
+                </div>
+                <div class="day-title">
+                    Tue
+                </div>
+                <div class="day-title">
+                    Wed
+                </div>
+                <div class="day-title">
+                    Thu
+                </div>
+                <div class="day-title">
+                    Fri
+                </div>
+                <div class="day-title">
+                    Sat
+                </div>
+                <div class="day-title">
+                    Sun
+                </div>
+                <div class="day" id="mon">
+                    <div class="content">
+                        Mon
+                        {{schedule[0]}}
+                    </div>
+                </div>
+                <div class="day" id="tue">
+                    <div class="content">
+                        Tue
+                        {{schedule[1]}}
+                    </div>
+                </div>
+                <div class="day" id="wed">
+                    <div class="content">
+                        Wed
+                        {{schedule[2]}}
+                    </div>
+                </div>
+                <div class="day" id="thu">
+                    <div class="content">
+                        Thu
+                        {{schedule[3]}}
+                    </div>
+                </div>
+                <div class="day" id="fri">
+                    <div class="content">
+                        Fri
+                        {{schedule[4]}}
+                    </div>
+                </div>
+                <div class="day" id="sat">
+                    <div class="content">
+                        Sat
+                        {{schedule[5]}}
+                    </div>
+                </div>
+                <div class="day" id="sun">
+                    <div class="content">
+                        Sun
+                        {{schedule[6]}}
+                    </div>
+                </div>
+            </div>
+            <div class="add-show">
+                <form class="add-link" method="POST">
+                    <input type="text" id="link" name="link">
+                    <input type="submit">
+                </form>
+            </div>
+            <div class="shows">
+                <p>
+                    {{data['title']}}
+                    {{data['date']}}
+                    {{data['num-eps']}}
+                </p>
+            </div>
+        </div>
+    </body>
+</html>
